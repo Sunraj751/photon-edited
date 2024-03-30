@@ -1,0 +1,17 @@
+target/
+photon_data/
+dependency-reduced-pom.xml
+
+.idea/
+*.iml
+*.~*
+
+website/photon/config.js
+
+nb-configuration.xml
+
+nbactions.xml
+
+.classpath
+.project
+.settings/
