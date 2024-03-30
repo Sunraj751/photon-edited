@@ -124,8 +124,9 @@ public class Server {
 
     public void waitForReady() {
         esClient.admin().cluster().prepareHealth().setWaitForYellowStatus().get();
-        esClient.admin().indices().prepareFlush(PhotonIndex.NAME).get();    // https://github.com/komoot/photon/discussions/717
-        esClient.admin().indices().prepareRefresh(PhotonIndex.NAME).get();  // https://github.com/komoot/photon/discussions/717
+        esClient.admin().indices().prepareFlush("photon").get();  // https://github.com/komoot/photon/discussions/717
+        esClient.admin().indices().prepareRefresh("photon").get(); // https://github.com/komoot/photon/discussions/717
+        
     }
 
     /**
